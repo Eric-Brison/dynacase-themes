@@ -1,0 +1,39 @@
+<?php
+/*
+ * @author Anakeen
+ * @license http://www.fsf.org/licensing/licenses/agpl-3.0.html GNU Affero General Public License
+ * @package FDL
+*/
+
+//global $sty_desc, $sty_const;
+$sty_desc = array(
+    "name" => "SKYBLUE", //Name
+    "description" => N_("Blue Style") , //long description 
+);
+
+$sty_inherit = "STYLE/MODERN/MODERN.sty";
+// global parameters which can be use for other css
+$sty_rules = array(
+    'css' => array(
+        'dcp/jquery-ui.css' => array(
+            "src" => array(
+                "lib/jquery-ui/css/smoothness/jquery-ui.css",
+                "STYLE/SKYBLUE/Layout/jquery-blue.css"
+            )
+        ) ,
+        'dcp/main.css' => array(
+            "src" => array(
+                "CORE/Layout/core.css",
+                "FDL/Layout/freedom.css",
+                "WHAT/Layout/size-normal.css",
+                "STYLE/MODERN/Layout/MODERN.css",
+                "STYLE/SKYBLUE/Layout/main-blue.css"
+            ) ,
+            "flags" => Style::RULE_FLAG_PARSE_ON_RUNTIME,
+            "deploy_parser" => array(
+                "className" => '\Dcp\Style\dcpCssTemplateParser'
+            )
+        )
+    )
+);
+?>
