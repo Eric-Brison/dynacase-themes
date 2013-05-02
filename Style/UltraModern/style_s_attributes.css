@@ -7,3 +7,11 @@ input[visibility="S"], input[visibility="S"]:hover, textarea[visibility=S], div.
     margin-bottom: 2px;
     text-overflow : ellipsis;
 }
+
+select[visibility=S] {
+    border: none;
+    color: black;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
