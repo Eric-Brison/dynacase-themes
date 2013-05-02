@@ -1,0 +1,34 @@
+<?php
+/*
+ * @author Anakeen
+ * @license http://www.fsf.org/licensing/licenses/agpl-3.0.html GNU Affero General Public License
+ * @package FDL
+*/
+
+//global $sty_desc, $sty_const;
+$sty_desc = array(
+    "name" => "ULTRAMODERN", //Name
+    "description" => "ULTRA MODERN" , //long description
+);
+
+$sty_inherit = "STYLE/MODERN/MODERN.sty";
+// global parameters which can be use for other css
+$sty_rules = array(
+    'css' => array(
+         'dcp/document-edit.css' => array(
+            "src" => array(
+                "FDL/Layout/editdoc.css",
+                "FDL/Layout/autocompletion.css",
+                "FDL/Layout/popup.css",
+                "FDL/Layout/document.css",
+                "STYLE/MODERN/Layout/calendar.css",
+                "STYLE/ULTRAMODERN/Layout/style_s_attributes.css"
+            ) ,
+            "flags" => Style::RULE_FLAG_PARSE_ON_RUNTIME,
+            "deploy_parser" => array(
+                "className" => '\Dcp\Style\dcpCssTemplateParser'
+            )
+        )
+    )
+);
+?>
