@@ -1,0 +1,17 @@
+input[visibility="S"], input[visibility="S"]:hover, textarea[visibility="S"], div.static {
+    color: black;
+    background: white;
+    border: none;
+    border-style: none;
+    padding: 0;
+    margin-bottom: 2px;
+    text-overflow : ellipsis;
+}
+
+select[visibility="S"] {
+    border: none;
+    color: black;
+    background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}

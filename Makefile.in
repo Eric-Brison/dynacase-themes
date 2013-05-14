@@ -15,26 +15,31 @@ GZIP_ENV = --best
 
 export targetdir PACKAGE
 
-SUBDIR= 
+SUBDIR=
 
 include $(utildir)/PubRule
 
 TRANSODS = Families/zoo-families.ods
 DISTFILES += $(SUBDIR)  $(wildcard *.ods)\
-            $(wildcard *.in) \
-            VERSION RELEASE  \
-	    $(PACKAGE)_en.po $(PACKAGE)_fr.po 
+			$(wildcard *.in) \
+			VERSION RELEASE  \
+		$(PACKAGE)_en.po $(PACKAGE)_fr.po
 
 webinst-theme-blue:
-	make -C Style/SkyBlue webinst RELEASE=$(RELEASE) PACKAGE=$(PACKAGE)-blue VERSION=$(VERSION) 
+	make -C Style/SkyBlue webinst RELEASE=$(RELEASE) PACKAGE=$(PACKAGE)-blue VERSION=$(VERSION)
 	mv Style/SkyBlue/*webinst .
 
 
-webinst: webinst-theme-blue
+webinst-theme-ultra-modern:
+	make -C Style/UltraModern webinst RELEASE=$(RELEASE) PACKAGE=$(PACKAGE)-ultra-modern VERSION=$(VERSION)
+	mv Style/UltraModern/*webinst .
+
+
+webinst: webinst-theme-blue webinst-theme-ultra-modern
 	echo DONE.
 
 publish-theme-blue:
-	make -C Style/SkyBlue publish RELEASE=$(RELEASE) PACKAGE=$(PACKAGE)-blue VERSION=$(VERSION) 
+	make -C Style/SkyBlue publish RELEASE=$(RELEASE) PACKAGE=$(PACKAGE)-blue VERSION=$(VERSION)
 
 publish : publish-theme-blue
 
