@@ -1,4 +1,4 @@
-input[visibility="S"], input[visibility="S"]:hover, textarea[visibility=S], div.static {
+input[visibility="S"], input[visibility="S"]:hover, textarea[visibility="S"], div.static {
     color: black;
     background: white;
     border: none;
@@ -8,7 +8,7 @@ input[visibility="S"], input[visibility="S"]:hover, textarea[visibility=S], div.
     text-overflow : ellipsis;
 }
 
-select[visibility=S] {
+select[visibility="S"] {
     border: none;
     color: black;
     background: white;
