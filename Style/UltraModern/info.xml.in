@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <module name="dynacase-theme-ultramodern" disabled="no" version="@VERSION@" release="@RELEASE@">
 
-  <description>ULTRAMODERN Theme.</description>
+  <description>ULTRAMODERN Theme. Same as MODERN but static attribute are view as normal text in forms</description>
 
   <requires>
-    <module name="dynacase-core" version="3.2.6" comp="ge"/>
+    <module name="dynacase-core" version="3.2.7" comp="ge"/>
   </requires>
 
   <post-install>

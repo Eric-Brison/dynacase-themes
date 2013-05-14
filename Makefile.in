@@ -19,7 +19,7 @@ SUBDIR=
 
 include $(utildir)/PubRule
 
-TRANSODS = Families/zoo-families.ods
+TRANSODS = 
 DISTFILES += $(SUBDIR)  $(wildcard *.ods)\
 			$(wildcard *.in) \
 			VERSION RELEASE  \
@@ -40,8 +40,10 @@ webinst: webinst-theme-blue webinst-theme-ultra-modern
 
 publish-theme-blue:
 	make -C Style/SkyBlue publish RELEASE=$(RELEASE) PACKAGE=$(PACKAGE)-blue VERSION=$(VERSION)
+publish-theme-ultramodern:
+	make -C Style/UltraModern publish RELEASE=$(RELEASE) PACKAGE=$(PACKAGE)-blue VERSION=$(VERSION)
 
-publish : publish-theme-blue
+publish : publish-theme-blue publish-theme-ultramodern
 
 clean:
 	/bin/rm -f *.*~ config.* Makefile configure $(appname)_init.php info.xml $(PACKAGE)-*webinst

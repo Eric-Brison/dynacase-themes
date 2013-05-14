@@ -4,7 +4,7 @@
   <description>Sky Blue Theme.</description>
 
   <requires>
-    <module name="dynacase-core" version="3.2.6" comp="ge"/>
+    <module name="dynacase-core" version="3.2.7" comp="ge"/>
   </requires>
 
   <post-install>
